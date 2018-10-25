@@ -9,7 +9,7 @@ import Navigation from '../Navigation/Navigation';
 class Header extends React.Component{
     render(){
         return (
-            <div header>
+            <div className="header">
                 <h1>Hello World!</h1>
                 <Navigation></Navigation>
             </div>

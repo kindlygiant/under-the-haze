@@ -7,7 +7,7 @@ import './Navigation.scss';
 class Navigation extends React.Component{
     render(){
         return (
-            <ul>
+            <ul className="nav">
                 <li>Overview</li>
                 <li>Episodes</li>
             </ul>
