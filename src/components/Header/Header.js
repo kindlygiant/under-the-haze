@@ -39,7 +39,7 @@ class Header extends React.Component{
                 </div>
                 <div className='title'>
                     <Link to={'/'}>
-                        <h1>Hello World!</h1>
+                        <h1>Under the Haze</h1>
                     </Link>
                 </div>
                 <div className="nav desktop">
