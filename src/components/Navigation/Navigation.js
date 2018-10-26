@@ -8,19 +8,17 @@ import './Navigation.scss';
 class Navigation extends React.Component{
     render(){
         return (
-            <div className="nav">
-                <ul>
-                    <li>
-                        <Link to={'/overview'}>Overview</Link>
-                    </li>
-                    <li>
-                        <Link to={'/episodes'}>Episodes</Link>
-                    </li>
-                    <li>
-                        <Link to={'/donate'}>Donate</Link>
-                    </li>
-                </ul>
-            </div>
+            <ul>
+                <li>
+                    <Link to={'/overview'}>Overview</Link>
+                </li>
+                <li>
+                    <Link to={'/episodes'}>Episodes</Link>
+                </li>
+                <li>
+                    <Link to={'/donate'}>Donate</Link>
+                </li>
+            </ul>
         );
     }
 }

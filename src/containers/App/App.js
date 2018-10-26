@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
+
 //Styling
 import './App.scss';
 
@@ -16,7 +17,7 @@ class App extends React.Component{
             <Router>
                 <div className="app">
                     <Header></Header>
-
+                    
                     <main>
                         Content
                         <Route exact path="/" component={Home} />

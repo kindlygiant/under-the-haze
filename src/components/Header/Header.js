@@ -1,22 +1,48 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { slide as Menu } from 'react-burger-menu';
 
 //Styling
 import './Header.scss';
 
 //Components
-import Navigation from '../Navigation/Navigation';
 
 class Header extends React.Component{
+    links = [ 
+        {
+            link:'/overview', 
+            name:'Overview'
+        },
+        {
+            link:'/episodes',
+            name:'Episodes'
+        },
+        {
+            link:'/donate',
+            name:'Donate'
+        }
+    ];
+    
     render(){
         return (
             <div className="header">
+                <div className="nav mobile">
+                    <Menu isOpen={false}>
+                        {this.links.map((link) =>
+                            <Link to={link.link}>{link.name}</Link>
+                        )}
+                    </Menu>
+                </div>
                 <div className='title'>
                     <Link to={'/'}>
                         <h1>Hello World!</h1>
                     </Link>
                 </div>
-                <Navigation></Navigation>
+                <div className="nav desktop">
+                    {this.links.map((link) =>
+                        <Link to={link.link}>{link.name}</Link>
+                    )}
+                </div>
             </div>
         );
     }
