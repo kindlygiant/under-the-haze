@@ -1,32 +1,49 @@
-$font-stack: 'Crimson Text', serif;
-$primary-color: #000;
-$background-color: #F7F7F7;
+@import '../../css/variables.scss';
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0 0;
+}
 
 .header{
     position: fixed;
+    padding: 30px;
     width: 100%;
-    height: 90px;
-    z-index: 10;
     background: $primary-color;
     color: $background-color;
     
-    .title{
-        padding: 0 30px;
-        display: inline-block;
+    a {
+        color: $link-color;
+
+        &:link {
+            text-decoration: none;
+        }
+        
+        &:visited {
+            text-decoration: none;
+        }
+        
+        &:hover {
+            text-decoration: underline;
+            color: $secondary-color;
+        }
+        
+        &:active {
+            text-decoration: underline;
+            color: $secondary-color;
+        }
+
     }
 
-    .nav{
-        float: right;
-
-        ul {
-            margin: 30px 0;
-            padding: 0 20px;
-            text-align: center;
-        }
-    
-        li{
-            padding: 0 20px;
-            display: inline-block;
-        }
+    .title{
+        float: left;
+        padding: 0 30px;
     }
 }

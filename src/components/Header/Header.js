@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //Styling
 import './Header.scss';
@@ -11,7 +12,9 @@ class Header extends React.Component{
         return (
             <div className="header">
                 <div className='title'>
-                    <h1>Hello World!</h1>
+                    <Link to={'/'}>
+                        <h1>Hello World!</h1>
+                    </Link>
                 </div>
                 <Navigation></Navigation>
             </div>
