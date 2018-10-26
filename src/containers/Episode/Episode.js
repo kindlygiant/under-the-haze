@@ -9,7 +9,7 @@ class Episode extends React.Component{
         return (
             <div className="episodes">
                 <p>
-                    Episodes
+                    No episodes yet! Mostly because we're just <strong>so so very lazy.</strong>
                 </p>
             </div>
         );

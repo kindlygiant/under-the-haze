@@ -9,7 +9,7 @@ class Home extends React.Component{
         return (
             <div className="home">
                 <p>
-                    Home Content
+                    Home Content. It's very homey here.
                 </p>
             </div>
         );

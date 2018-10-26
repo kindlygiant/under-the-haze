@@ -10,6 +10,7 @@ import Home from '../Home/Home';
 import Overview from '../Overview/Overview';
 import Episode from '../Episode/Episode';
 import Donate from '../Donate/Donate';
+import Music from '../Music/Music';
 
 class App extends React.Component{
     render(){
@@ -17,12 +18,11 @@ class App extends React.Component{
             <Router>
                 <div className="app">
                     <Header></Header>
-                    
                     <main>
-                        Content
                         <Route exact path="/" component={Home} />
                         <Route path="/overview" component={Overview} />
                         <Route path="/episodes" component={Episode} />
+                        <Route path="/music" component={Music} />
                         <Route path="/donate" component={Donate} />
                     </main>
                 </div>

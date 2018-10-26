@@ -9,7 +9,7 @@ class Overview extends React.Component{
         return (
             <div className="overview">
                 <p>
-                    Overview Content
+                    So far nothing has happened because we haven't recorded anything.
                 </p>
             </div>
         );

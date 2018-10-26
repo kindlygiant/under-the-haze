@@ -18,6 +18,10 @@ class Header extends React.Component{
             name:'Episodes'
         },
         {
+            link:'/music',
+            name:'Music'
+        },
+        {
             link:'/donate',
             name:'Donate'
         }
