@@ -11,8 +11,8 @@ class App extends React.Component{
             <div className="app">
                 <Header></Header>
 
-                <main className="mainContent">
-                    
+                <main>
+                    Content
                 </main>
             </div>
         );

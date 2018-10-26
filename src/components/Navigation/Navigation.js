@@ -7,10 +7,12 @@ import './Navigation.scss';
 class Navigation extends React.Component{
     render(){
         return (
-            <ul className="nav">
-                <li>Overview</li>
-                <li>Episodes</li>
-            </ul>
+            <div className="nav">
+                <ul>
+                    <li>Overview</li>
+                    <li>Episodes</li>
+                </ul>
+            </div>
         );
     }
 }
