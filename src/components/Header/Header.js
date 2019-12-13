@@ -32,8 +32,8 @@ class Header extends React.Component{
             <div className="header">
                 <div className="nav mobile">
                     <Menu isOpen={false}>
-                        {this.links.map((link) =>
-                            <Link to={link.link}>{link.name}</Link>
+                        {this.links.map((link, i) =>
+                            <Link to={link.link} key={i}>{link.name}</Link>
                         )}
                     </Menu>
                 </div>
@@ -43,8 +43,8 @@ class Header extends React.Component{
                     </Link>
                 </div>
                 <div className="nav desktop">
-                    {this.links.map((link) =>
-                        <Link to={link.link}>{link.name}</Link>
+                    {this.links.map((link, i) =>
+                        <Link to={link.link} key={i}>{link.name}</Link>
                     )}
                 </div>
             </div>
