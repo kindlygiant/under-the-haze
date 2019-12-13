@@ -2,10 +2,12 @@
 
 .episode {
     background: $background-color-surface;
+    color: $on-surface;
     display: flex;
     margin: 25px;
     box-shadow: $shadow-1;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 2px;
 
     &:hover {
         box-shadow: $shadow-1;
@@ -24,8 +26,8 @@
         text-align: left;
 
         .episode-header {
-            background: $background-color-dark;
-            color: $text-color-dark;
+            background: $primary-variant;
+            color: $on-primary;
             
             padding: 20px;
         }

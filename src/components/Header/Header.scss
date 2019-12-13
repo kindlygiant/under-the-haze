@@ -3,9 +3,10 @@
 h1 {
     margin: 0 0;
 }
-
 a {
-    color: $text-color-dark;
+    padding: 0;
+    color: $on-primary;
+    position: relative;
 
     &:link {
         text-decoration: none;
@@ -14,23 +15,68 @@ a {
     &:visited {
         text-decoration: none;
     }
-    
-    &:hover {
-        text-decoration: underline;
-        color: $link-color;
-    }
-    
-    &:active {
-        text-decoration: underline;
-        color: $link-color;
-    }
+}
 
+.nav {
+    box-sizing: border-box;
+    a {
+        padding: 0;
+        color: $on-primary;
+        position: relative;
+
+        &:link {
+            text-decoration: none;
+        }
+        
+        &:visited {
+            text-decoration: none;
+        }
+
+        &:before,
+        &:after {
+            position: absolute;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+
+        &:before {
+            bottom: -5px;
+            display: block;
+            height: 4px;
+            width: 0%;
+            content: "";
+            background-color: $secondary;
+        }
+
+        &:after {
+            content: attr(data-hover);
+            left: 0;
+            top: 0;
+            color: $on-secondary;
+            white-space: nowrap;
+            max-width: 0%;
+            overflow: hidden;
+        }
+        &:hover:before,
+        &.active:before {
+            opacity: 1;
+            width: 100%;
+        }
+        &:hover:after,
+        &.active:after {
+            max-width: 100%;
+        }
+    }
+    li {
+        display: inline-block;
+        list-style: outside none none;
+        padding: 0 20px;
+    }
 }
 
 .header{
     width: 100%;
-    background: $background-color-dark;
-    position: sticky;
+    background: $primary;
     display: flex;
     align-items: baseline;
     justify-content: space-around;
@@ -55,16 +101,18 @@ a {
     display:flex;
     align-items: baseline;
     @media screen and (max-width:768px){
-        display:none;
-    }
-
-    a{
-        padding: 0 20px;
+        display: none;
     }
 }
 
 .mobile {
     display:none;
+    li {
+        padding: 20px; 
+    }
+    a:after {
+        top: -1px;
+    }
     @media only screen and (max-width: 768px){
         display: block;
     }
@@ -80,7 +128,7 @@ a {
 
   /* Color/shape of burger icon bars */
 .bm-burger-bars {
-    background: $text-color-dark;
+    background: $on-primary;
 }
 
 .bm-cross-button {
@@ -90,24 +138,24 @@ a {
 
 /* Color/shape of close button cross */
 .bm-cross {
-    background: $text-color-dark;
+    background: $on-primary;
 }
 
 /* General sidebar styles */
 .bm-menu {
-    background: $background-color-dark;
+    background: $primary;
     padding: 2em 1.5em 0;
     font-size: 1.15em;
   }
    
   /* Morph shape necessary with bubble or elastic */
   .bm-morph-shape {
-    fill: $primary-color;
+    fill: $primary;
   }
    
   /* Wrapper for item list */
   .bm-item-list {
-    color: $text-color-dark;
+    color: $on-primary;
     width: 100%;
   }
    
@@ -124,5 +172,5 @@ a {
    
   /* Styling of overlay */
   .bm-overlay {
-    background: $background-color-dark;
+    background: $background-color;
   }

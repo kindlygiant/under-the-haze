@@ -5,35 +5,55 @@ import { slide as Menu } from 'react-burger-menu';
 //Styling
 import './Header.scss';
 
-//Components
+//Data
+const links = [ 
+    {
+        link:'/overview', 
+        name:'Overview'
+    },
+    {
+        link:'/episodes',
+        name:'Episodes'
+    },
+    {
+        link:'/music',
+        name:'Music'
+    },
+    {
+        link:'/donate',
+        name:'Donate'
+    }
+];
 
 class Header extends React.Component{
-    links = [ 
-        {
-            link:'/overview', 
-            name:'Overview'
-        },
-        {
-            link:'/episodes',
-            name:'Episodes'
-        },
-        {
-            link:'/music',
-            name:'Music'
-        },
-        {
-            link:'/donate',
-            name:'Donate'
+    constructor(props) {
+        super(props);
+        this.state = {
+            active: '/home'
         }
-    ];
-    
+        this._handleClick = this._handleClick.bind(this);
+    }
+
+    _handleClick(menuItem) { 
+        this.setState({ active: menuItem });
+    }
+
     render(){
         return (
             <div className="header">
                 <div className="nav mobile">
                     <Menu isOpen={false}>
-                        {this.links.map((link, i) =>
-                            <Link to={link.link} key={i}>{link.name}</Link>
+                        {links.map((link, i) =>
+                            <li>
+                                <Link 
+                                    to={link.link} 
+                                    key={i}
+                                    className={this.state.active === link.link ? "active" : ""}
+                                    data-hover={link.name}
+                                    onClick={this._handleClick.bind(this, link.link)}>
+                                    {link.name}
+                                </Link>
+                            </li>
                         )}
                     </Menu>
                 </div>
@@ -43,8 +63,17 @@ class Header extends React.Component{
                     </Link>
                 </div>
                 <div className="nav desktop">
-                    {this.links.map((link, i) =>
-                        <Link to={link.link} key={i}>{link.name}</Link>
+                    {links.map((link, i) =>
+                        <li>
+                            <Link 
+                                to={link.link} 
+                                key={i}
+                                className={this.state.active === link.link ? "active" : ""}
+                                data-hover={link.name}
+                                onClick={this._handleClick.bind(this, link.link)}>
+                                {link.name}
+                            </Link>
+                        </li>
                     )}
                 </div>
             </div>

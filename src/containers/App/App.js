@@ -14,10 +14,11 @@ import Music from '../Music/Music';
 
 class App extends React.Component{
     render(){
+        const { location } = this.props;
         return (
             <Router>
                 <div className="app">
-                    <Header></Header>
+                    <Header location={location}></Header>
                     <main>
                         <Route exact path="/" component={Home} />
                         <Route path="/overview" component={Overview} />

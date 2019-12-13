@@ -5,7 +5,7 @@ body {
     margin: 0 0;
     padding: 0;
     font: 100% $font-stack;
-    color: $text-color;
+    color: $on-background;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 100;
@@ -15,6 +15,14 @@ main {
     margin-top: 100px;
     padding: 40px;
     text-align: center;
+
+    @media only screen and (max-width: 768px) {
+        padding: 15px;
+    }
+}
+
+ul {
+    padding: 0;
 }
 
 /* For mobile phones: */
