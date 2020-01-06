@@ -84,11 +84,13 @@ a {
     top: 0;
 
     .title{
-        padding: 30px 0;
+        padding: 40px 0;
         font-family: 'LongShot', serif;
         @media screen and (max-width:768px){
-            width:100%;
-            text-align: center;
+            width: 100%;
+            position: absolute;
+            text-align: right;
+            right: 32px;
         }
     }
 

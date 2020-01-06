@@ -5,6 +5,9 @@ import { slide as Menu } from 'react-burger-menu';
 //Styling
 import './Header.scss';
 
+//Assets
+import logo from '../../assets/img/uth_logo.svg';
+
 //Data
 const links = [ 
     {
@@ -59,7 +62,7 @@ class Header extends React.Component{
                 </div>
                 <div className='title'>
                     <Link to={'/'}>
-                        <h1>Under the Haze</h1>
+                        <img src={logo} alt="Under the Haze"></img>
                     </Link>
                 </div>
                 <div className="nav desktop">
