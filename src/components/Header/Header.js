@@ -44,10 +44,10 @@ class Header extends React.Component{
                 <div className="nav mobile">
                     <Menu isOpen={false}>
                         {links.map((link, i) =>
-                            <li>
+                            <li key={i}>
                                 <Link 
                                     to={link.link} 
-                                    key={i}
+                                    
                                     className={this.state.active === link.link ? "active" : ""}
                                     data-hover={link.name}
                                     onClick={this._handleClick.bind(this, link.link)}>
@@ -64,10 +64,10 @@ class Header extends React.Component{
                 </div>
                 <div className="nav desktop">
                     {links.map((link, i) =>
-                        <li>
+                        <li key={i}>
                             <Link 
                                 to={link.link} 
-                                key={i}
+                                
                                 className={this.state.active === link.link ? "active" : ""}
                                 data-hover={link.name}
                                 onClick={this._handleClick.bind(this, link.link)}>
