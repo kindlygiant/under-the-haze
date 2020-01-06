@@ -1,14 +1,42 @@
 @import '../../css/variables.scss';
 
-h3 {
-    width: 100%; 
-    text-align: center; 
-    border-bottom: 1px solid #000; 
-    line-height: 0.1em;
-    margin: 8px 0 8px; 
+.content {
+    background-color: $background-color;
+    padding: 40px;
+    text-align: center;
 
-    span { 
-        background: $background-color; 
-        padding:0 48px; 
+    @media only screen and (max-width: 768px) {
+        padding: 16px 32px;
     }
-} 
+
+    h3.section-header {
+        width: 100%; 
+        text-align: center; 
+        color: $tertiary;
+        border-bottom: 1px solid $tertiary; 
+        line-height: 0.1em;
+        margin: 32px 0; 
+        background-color: inherit;
+    
+        span { 
+            background: inherit;
+            padding:0 48px; 
+        }
+    } 
+}
+
+.slot-2 {
+    background: $secondary;
+    color: $on-secondary;
+
+    h3.section-header {
+        border-bottom: 1px solid $tertiary-variant; 
+        span {
+            color: $tertiary-variant;
+        }
+    }
+}
+
+.slot-3 {
+    background: $tertiary;
+}
