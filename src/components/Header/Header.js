@@ -1,32 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { slide as Menu } from 'react-burger-menu';
+import NavLinks from '../NavLinks/NavLinks';
 
 //Styling
 import './Header.scss';
 
 //Assets
 import logo from '../../assets/img/uth_logo.svg';
-
-//Data
-const links = [ 
-    {
-        link:'/overview', 
-        name:'Overview'
-    },
-    {
-        link:'/episodes',
-        name:'Episodes'
-    },
-    {
-        link:'/music',
-        name:'Music'
-    },
-    {
-        link:'/donate',
-        name:'Donate'
-    }
-];
 
 class Header extends React.Component{
     constructor(props) {
@@ -45,20 +25,7 @@ class Header extends React.Component{
         return (
             <div className="header">
                 <div className="nav mobile">
-                    <Menu isOpen={false}>
-                        {links.map((link, i) =>
-                            <li key={i}>
-                                <Link 
-                                    to={link.link} 
-                                    
-                                    className={this.state.active === link.link ? "active" : ""}
-                                    data-hover={link.name}
-                                    onClick={this._handleClick.bind(this, link.link)}>
-                                    {link.name}
-                                </Link>
-                            </li>
-                        )}
-                    </Menu>
+                    <NavLinks></NavLinks>
                 </div>
                 <div className='title'>
                     <Link to={'/'}>
@@ -66,18 +33,7 @@ class Header extends React.Component{
                     </Link>
                 </div>
                 <div className="nav desktop">
-                    {links.map((link, i) =>
-                        <li key={i}>
-                            <Link 
-                                to={link.link} 
-                                
-                                className={this.state.active === link.link ? "active" : ""}
-                                data-hover={link.name}
-                                onClick={this._handleClick.bind(this, link.link)}>
-                                {link.name}
-                            </Link>
-                        </li>
-                    )}
+                    <NavLinks></NavLinks>
                 </div>
             </div>
         );
