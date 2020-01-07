@@ -1,0 +1,37 @@
+[ 
+    {
+        "link":"/overview", 
+        "name":"Overview",
+        "visible": false
+    },
+    {
+        "link":"/episodes",
+        "name":"Episodes",
+        "visible": false
+    },
+    {
+        "link":"/music",
+        "name":"Music",
+        "visible": false
+    },
+    {
+        "link":"/about",
+        "name":"About Under the Haze",
+        "visible": true
+    },
+    {
+        "link":"/donate",
+        "name":"Donate",
+        "visible": true
+    },
+    {
+        "link":"/listen",
+        "name":"How to Listen",
+        "visible": true
+    },
+    {
+        "link":"/contact",
+        "name":"Contact",
+        "visible": true
+    }
+]

@@ -8,9 +8,31 @@ class Home extends React.Component{
     render(){
         return (
             <div className="home">
-                <p>
-                    Home Content. It's very homey here.
-                </p>
+
+                <div className="content slot-1">
+                    <h3  className="section-header">
+                        <span>New This Week</span>
+                    </h3>
+                    <p>
+                        Home Content. It's very homey here.
+                    </p>
+                </div>
+                <div className="content slot-2">
+                    <h3 className="section-header">
+                        <span>Recently Aired</span>
+                    </h3>
+                    <p>
+                        Secondary Content.
+                    </p>
+                </div>
+                <div className="content slot-3">
+                    <h2>
+                        <span>About Season 1</span>
+                    </h2>
+                    <p>
+                        Tertiary Content.
+                    </p>
+                </div>
             </div>
         );
     }

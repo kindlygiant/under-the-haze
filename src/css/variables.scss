@@ -1,11 +1,28 @@
 $font-stack: 'Crimson Text', serif;
 
-$primary-color: #000;
-$secondary-color: #AAA;
-$link-color: #F7F7F7;
+$primary: #F5F3ED;
+$primary-variant: #F5F3ED;
+$secondary: #636D67;
+$secondary-variant: #8D8C8B;
+$tertiary: #917B15;
+$tertiary-variant: #B0AA82;
+$tertiary-variant-2: #D6C990;
 
-$text-color: rgb(5, 5, 5);
-$text-color-dark: rgb(177, 177, 177);
+$on-primary: #000;
+$on-secondary: #F5F3ED;
+$on-tertiary: #000;
+$on-nav: #4F4F4F;
 
-$background-color: rgb(219, 219, 219);
-$background-color-dark: rgb(0, 0, 0)
+$on-background: #000;
+$on-surface: #000;
+$on-error: rgb(177, 177, 177);
+
+$background-color: $primary;
+$background-color-surface: #EAE2CD;
+$background-color-error: #000;
+
+$shadow-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$shadow-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$shadow-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$shadow-4: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+$shadow-5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);

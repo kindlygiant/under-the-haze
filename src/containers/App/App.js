@@ -8,20 +8,21 @@ import './App.scss';
 import Header from '../../components/Header/Header';
 import Home from '../Home/Home';
 import Overview from '../Overview/Overview';
-import Episode from '../Episode/Episode';
+import EpisodeList from '../EpisodeList/EpisodeList';
 import Donate from '../Donate/Donate';
 import Music from '../Music/Music';
 
 class App extends React.Component{
     render(){
+        const { location } = this.props;
         return (
             <Router>
                 <div className="app">
-                    <Header></Header>
+                    <Header location={location}></Header>
                     <main>
                         <Route exact path="/" component={Home} />
                         <Route path="/overview" component={Overview} />
-                        <Route path="/episodes" component={Episode} />
+                        <Route path="/episodes" component={EpisodeList} />
                         <Route path="/music" component={Music} />
                         <Route path="/donate" component={Donate} />
                     </main>

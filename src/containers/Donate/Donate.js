@@ -9,11 +9,10 @@ class Donate extends React.Component{
         return (
             <div className="donate">
                 <p>
-                    Right now we only take donations in the form of cryptic and mildly threatening notes made from newspaper and magazine clippings sent to this address:
+                    Right now we only take donations in the form of cryptic and mildly threatening notes made from newspaper and magazine clippings sent to this P.O. Box:
                 </p>
                 <div className="address">
-                    <p>REDACTED</p>
-                    <p>REDACTED</p>
+                    <p>Note to self: get a P.O. Box</p>
                 </div>
                 <p>
                     Please don't put a return address.

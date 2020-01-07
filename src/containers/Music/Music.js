@@ -9,7 +9,7 @@ class Music extends React.Component{
         return (
             <div className="Music">
                 <p>
-                    No music yet! Mostly because Will has been <strong>slacking.</strong>
+                    No music yet! But we're working hard on it!
                 </p>
             </div>
         );

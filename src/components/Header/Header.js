@@ -1,51 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { slide as Menu } from 'react-burger-menu';
+import NavLinks from '../NavLinks/NavLinks';
 
 //Styling
 import './Header.scss';
 
-//Components
+//Assets
+import logo from '../../assets/img/uth_logo.svg';
 
 class Header extends React.Component{
-    links = [ 
-        {
-            link:'/overview', 
-            name:'Overview'
-        },
-        {
-            link:'/episodes',
-            name:'Episodes'
-        },
-        {
-            link:'/music',
-            name:'Music'
-        },
-        {
-            link:'/donate',
-            name:'Donate'
+    constructor(props) {
+        super(props);
+        this.state = {
+            active: '/home'
         }
-    ];
-    
+        this._handleClick = this._handleClick.bind(this);
+    }
+
+    _handleClick(menuItem) { 
+        this.setState({ active: menuItem });
+    }
+
     render(){
         return (
             <div className="header">
                 <div className="nav mobile">
-                    <Menu isOpen={false}>
-                        {this.links.map((link) =>
-                            <Link to={link.link}>{link.name}</Link>
-                        )}
-                    </Menu>
+                    <NavLinks isMobile={true}></NavLinks>
                 </div>
                 <div className='title'>
                     <Link to={'/'}>
-                        <h1>Under the Haze</h1>
+                        <img src={logo} alt="Under the Haze"></img>
                     </Link>
                 </div>
                 <div className="nav desktop">
-                    {this.links.map((link) =>
-                        <Link to={link.link}>{link.name}</Link>
-                    )}
+                    <NavLinks isMobile={false}></NavLinks>
                 </div>
             </div>
         );

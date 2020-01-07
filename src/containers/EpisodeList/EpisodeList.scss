@@ -1,0 +1,42 @@
+@import '../../css/variables.scss';
+
+.episode {
+    background: $background-color-surface;
+    color: $on-surface;
+    display: flex;
+    margin: 25px;
+    box-shadow: $shadow-1;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 2px;
+
+    &:hover {
+        box-shadow: $shadow-1;
+    }
+
+    @media only screen and (max-width: 768px) {
+        display: block;
+    }
+
+    .thumbnail {
+        height: 200px;
+        width: 200px;
+    }
+    .content {
+        flex: auto;
+        text-align: left;
+
+        .episode-header {
+            background: $primary-variant;
+            font-weight: 900;
+            color: $on-primary;
+            padding: 20px;
+        }
+        .description {
+            padding: 20px;
+        }
+        .footer {
+            text-align: right;
+            padding: 10px 0;
+        }
+    }
+}
