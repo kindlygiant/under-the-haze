@@ -25,7 +25,7 @@ class Header extends React.Component{
         return (
             <div className="header">
                 <div className="nav mobile">
-                    <NavLinks></NavLinks>
+                    <NavLinks isMobile={true}></NavLinks>
                 </div>
                 <div className='title'>
                     <Link to={'/'}>
@@ -33,7 +33,7 @@ class Header extends React.Component{
                     </Link>
                 </div>
                 <div className="nav desktop">
-                    <NavLinks></NavLinks>
+                    <NavLinks isMobile={false}></NavLinks>
                 </div>
             </div>
         );
