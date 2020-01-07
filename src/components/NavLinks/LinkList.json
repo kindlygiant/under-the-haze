@@ -7,7 +7,7 @@
     {
         "link":"/episodes",
         "name":"Episodes",
-        "visible": false
+        "visible": true
     },
     {
         "link":"/music",
