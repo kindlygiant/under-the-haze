@@ -56,14 +56,12 @@ class NavLinks extends React.Component{
 
     render(){
         return (
-            <div>
-                <FormatNavLinks 
-                    links={linkList} 
-                    active={this.state.active} 
-                    isMobile={this.isMobile}
-                    handler={this._handleClick}>
-                </FormatNavLinks>
-            </div>
+            <FormatNavLinks 
+                links={linkList} 
+                active={this.state.active} 
+                isMobile={this.isMobile}
+                handler={this._handleClick}>
+            </FormatNavLinks>
         );
     }
 }

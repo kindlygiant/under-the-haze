@@ -1,80 +1,6 @@
 @import '../../css/variables.scss';
 
-h1 {
-    margin: 0 0;
-}
-a {
-    padding: 0;
-    color: $on-primary;
-    position: relative;
-
-    &:link {
-        text-decoration: none;
-    }
-    
-    &:visited {
-        text-decoration: none;
-    }
-}
-
-.nav {
-    box-sizing: border-box;
-    a {
-        padding: 0;
-        color: $on-primary;
-        position: relative;
-
-        &:link {
-            text-decoration: none;
-        }
-        
-        &:visited {
-            text-decoration: none;
-        }
-
-        &:before,
-        &:after {
-            position: absolute;
-            -webkit-transition: all 0.35s ease;
-            transition: all 0.35s ease;
-        }
-
-        &:before {
-            bottom: -5px;
-            display: block;
-            height: 4px;
-            width: 0%;
-            content: "";
-            background-color: $secondary;
-        }
-
-        &:after {
-            content: attr(data-hover);
-            left: 0;
-            top: 0;
-            color: $on-secondary;
-            white-space: nowrap;
-            max-width: 0%;
-            overflow: hidden;
-        }
-        &:hover:before,
-        &.active:before {
-            opacity: 1;
-            width: 100%;
-        }
-        &:hover:after,
-        &.active:after {
-            max-width: 100%;
-        }
-    }
-    li {
-        display: inline-block;
-        list-style: outside none none;
-        padding: 0 20px;
-    }
-}
-
-.header{
+.header {
     width: 100%;
     background: $primary;
     display: flex;
@@ -83,6 +9,10 @@ a {
     position: fixed;
     top: 0;
 
+    h1 {
+        margin: 0 0;
+    }
+    
     .title{
         padding: 40px 0;
         font-family: 'LongShot', serif;
@@ -97,35 +27,83 @@ a {
     @media screen and (max-width:768px){
         display: inline-block;
     }
+
+    .nav {
+        box-sizing: border-box;
+        a {
+            padding: 0;
+            color: $on-primary;
+            position: relative;
     
-}
-.desktop {
-    display:flex;
-    align-items: baseline;
-    @media screen and (max-width:768px){
-        display: none;
+            &:before,
+            &:after {
+                position: absolute;
+                -webkit-transition: all 0.35s ease;
+                transition: all 0.35s ease;
+            }
+    
+            &:before {
+                bottom: -5px;
+                display: block;
+                height: 4px;
+                width: 0%;
+                content: "";
+                background-color: $secondary;
+            }
+    
+            &:after {
+                content: attr(data-hover);
+                left: 0;
+                top: 0;
+                color: $secondary;
+                white-space: nowrap;
+                max-width: 0%;
+                overflow: hidden;
+            }
+            &:hover:before,
+            &.active:before {
+                opacity: 1;
+                width: 100%;
+            }
+            &:hover:after,
+            &.active:after {
+                max-width: 100%;
+            }
+        }
+        li {
+            display: inline-block;
+            list-style: outside none none;
+            padding: 0 20px;
+        }
+    }
+
+    .desktop {
+        display:flex;
+        align-items: baseline;
+        @media screen and (max-width:768px){
+            display: none;
+        }
+    }
+    
+    .mobile {
+        display:none;
+        li {
+            padding: 8px 0; 
+        }
+        @media only screen and (max-width: 768px){
+            display: block;
+        }
     }
 }
 
-.mobile {
-    display:none;
-    li {
-        padding: 20px; 
-    }
-    a:after {
-        top: -1px;
-    }
-    @media only screen and (max-width: 768px){
-        display: block;
-    }
-}
+
 
 .bm-burger-button {
     position: fixed;
-    width: 36px;
-    height: 30px;
-    left: 36px;
-    top: 36px;
+    width: 24px;
+    height: 24px;
+    left: 32px;
+    top: 32px;
 }
 
   /* Color/shape of burger icon bars */

@@ -1,18 +1,21 @@
 import React from 'react';
+import EpisodeList from '../../components/EpisodeList/EpisodeList'
+
 //Styling
 import './Home.scss';
 
 //Components
 
 class Home extends React.Component{
+    MostRecentEpisodesFilter(episode) {
+        return new Date(episode.active_date) < new Date()
+    }
+
     render(){
         return (
             <div className="home">
 
                 <div className="content slot-1">
-                    <img src="" alt="placeholder">
-
-                    </img>
                     <h3  className="section-header">
                         <span>New This Week</span>
                     </h3>
@@ -25,7 +28,9 @@ class Home extends React.Component{
                         <span>Recently Aired</span>
                     </h3>
                     <div className="recent_episodes">
-                        
+                        <EpisodeList filter={this.MostRecentEpisodesFilter}>
+
+                        </EpisodeList>
                     </div>
                 </div>
                 <div className="content slot-3">

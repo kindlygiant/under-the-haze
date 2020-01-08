@@ -21,16 +21,16 @@ class Episode extends React.Component{
                     src={this.thumbnail}
                     alt={this.title}>
                 </img>
-                <div className="content">
+                <div className="episode-header">
                     <div className="active-date">
-                        {this.active_date}
+                        {new Date(this.active_date).toDateString()}
                     </div>
-                    <div className="episode-header">
+                    <div className="episode-title">
                         Episode {this.id} - {this.title}
                     </div>
-                    <div className="description">
-                        {this.description}
-                    </div>
+                </div>
+                <div className="episode-description">
+                    {this.description}
                 </div>
             </div>
         );

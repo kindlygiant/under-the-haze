@@ -6,6 +6,9 @@ import './App.scss';
 
 //Components
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer'
+
+//Containers
 import Home from '../Home/Home';
 import Overview from '../Overview/Overview';
 import Episodes from '../Episodes/Episodes';
@@ -26,6 +29,7 @@ class App extends React.Component{
                         <Route path="/music" component={Music} />
                         <Route path="/donate" component={Donate} />
                     </main>
+                    <Footer></Footer>
                 </div>
             </Router>
         );
