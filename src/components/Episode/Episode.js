@@ -7,7 +7,7 @@ class Episode extends React.Component{
     constructor(props) {
         super(props);
         this.id = props.id;
-        this.thumbnai = props.thumbnail;
+        this.thumbnail = props.thumbnail;
         this.title = props.title;
         this.description = props.description;
         this.duration = props.duration;

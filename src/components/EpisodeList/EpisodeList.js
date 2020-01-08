@@ -14,7 +14,7 @@ function Episodes(props) {
         <Episode
             id={episode.id}
             key={episode.id}
-            thumbnai={episode.thumbnail}
+            thumbnail={episode.thumbnail}
             title={episode.title}
             description={episode.description}
             duration={episode.duration}
