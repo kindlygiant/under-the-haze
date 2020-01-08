@@ -10,6 +10,9 @@ class Home extends React.Component{
             <div className="home">
 
                 <div className="content slot-1">
+                    <img src="" alt="placeholder">
+
+                    </img>
                     <h3  className="section-header">
                         <span>New This Week</span>
                     </h3>
@@ -21,9 +24,9 @@ class Home extends React.Component{
                     <h3 className="section-header">
                         <span>Recently Aired</span>
                     </h3>
-                    <p>
-                        Secondary Content.
-                    </p>
+                    <div className="recent_episodes">
+                        
+                    </div>
                 </div>
                 <div className="content slot-3">
                     <h2>
