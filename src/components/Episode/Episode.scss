@@ -2,7 +2,7 @@
 
 .episode {
     background: $background-color-surface;
-    color: $on-surface;
+    color: $tertiary-variant-2;
     display: flex;
 
     margin-bottom: 24px;
@@ -17,19 +17,64 @@
     }
 
     .thumbnail {
-        height: 200px;
-        width: 200px;
+        background-color: $primary-variant;
+        height: $thumbnail-size;
+        width: $thumbnail-size;
+
+        @media only screen and (max-width: 768px) {
+            height: $thumbnail-size-mobile;
+            width: $thumbnail-size-mobile;
+        }
     }
     .episode-header {
-        font-weight: 900;
-        padding: 20px;
+        display: inline-block;
+        text-align: left;
+        padding: 20px 0;
+
+        .active-date {
+            font-size: 12px;
+            font-family: $font-serif;
+            font-weight: 100px;
+        }
+        .episode-title {
+            font-weight: 900;
+            font-size: 22px;
+        }
     }
-    .description {
-        padding: 20px;
+    .episode-description {
+        text-align: left;
+        padding: 20px 0;
+        font-size: 14px;
+        letter-spacing: 1.2px;
     }
-    .footer {
-        text-align: right;
-        padding: 10px 0;
+}
+
+.split-content {
+    width: 100%;
+
+    span {
+        display: block;
+        margin-top: 8px;
+        letter-spacing: 1.2px;
+    }
+
+    .left, 
+    .right { 
+        float:none;
+        height: $thumbnail-size;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .left {
+            float:left;
+            width: 40%;
+            height: $thumbnail-size-mobile;
+        }
+        .right {
+            float: right;
+            width: 60%;
+            height: $thumbnail-size-mobile;
+        }
     }
 }
 

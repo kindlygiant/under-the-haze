@@ -17,16 +17,21 @@ class Episode extends React.Component{
     render(){
         return (
             <div className="episode">
-                <img className="thumbnail"
-                    src={this.thumbnail}
-                    alt={this.title}>
-                </img>
-                <div className="episode-header">
-                    <div className="active-date">
-                        {new Date(this.active_date).toDateString()}
+                <div className="episode-header split-content">
+                    <div className="left">
+                        <img className="thumbnail"
+                            src={this.thumbnail}
+                            alt={this.title}>
+                        </img>
                     </div>
-                    <div className="episode-title">
-                        Episode {this.id} - {this.title}
+                    <div className="right">
+                        <div className="active-date">
+                            {new Date(this.active_date).toLocaleDateString("en-US", { month: 'long', year: 'numeric', day: 'numeric'})}
+                        </div>
+                        <div className="episode-title">
+                            <span>Episode {this.id}:</span> 
+                            <span>{this.title}</span>
+                        </div>
                     </div>
                 </div>
                 <div className="episode-description">
