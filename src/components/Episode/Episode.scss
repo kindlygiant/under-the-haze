@@ -78,6 +78,13 @@
     }
 }
 
+.slot-1 {
+    .episode {
+        background-color: $primary;
+        color: $on-primary;
+    }
+}
+
 .slot-2 {
     .episode{
         background-color: $secondary;

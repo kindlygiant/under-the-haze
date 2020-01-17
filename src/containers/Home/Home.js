@@ -6,9 +6,25 @@ import './Home.scss';
 
 //Components
 
-class Home extends React.Component{
-    MostRecentEpisodesFilter(episode) {
-        return new Date(episode.active_date) < new Date()
+class Home extends React.Component{        
+
+    // Filters 
+    // Filters must be self contained since they are passed into various components.
+    // Attempts at breaking out common features into functions is futile. For now.
+    MostRecentEpisodesFilter(episode, index, episodeList) {
+        let mostRecentId = -1;
+        for ( var i = 0; i < episodeList.length ; i++) {
+            if (episodeList[i].id > mostRecentId) mostRecentId = episodeList[i].id;
+        }
+        return (new Date(episode.active_date) < new Date()) && !(episode.id === mostRecentId)
+    }
+
+    LatestEpisodeFilter(episode, index, episodeList) {
+        let mostRecentId = -1;
+        for ( var i = 0; i < episodeList.length ; i++) {
+            if (episodeList[i].id > mostRecentId) mostRecentId = episodeList[i].id;
+        }
+        return episode.id === mostRecentId;
     }
 
     render(){
@@ -19,15 +35,17 @@ class Home extends React.Component{
                     <h3  className="section-header">
                         <span>New This Week</span>
                     </h3>
-                    <p>
-                        Home Content. It's very homey here.
-                    </p>
+                    <div className="latest-episode">
+                        <EpisodeList filter={this.LatestEpisodeFilter}>
+
+                        </EpisodeList>
+                    </div>
                 </div>
                 <div className="content slot-2">
                     <h3 className="section-header">
                         <span>Recently Aired</span>
                     </h3>
-                    <div className="recent_episodes">
+                    <div className="recent-episodes">
                         <EpisodeList filter={this.MostRecentEpisodesFilter}>
 
                         </EpisodeList>

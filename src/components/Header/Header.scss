@@ -18,9 +18,11 @@
         font-family: 'LongShot', serif;
         @media screen and (max-width:768px){
             width: 100%;
-            position: absolute;
             text-align: right;
-            right: 32px;
+
+            a {
+                padding-right: 32px;
+            }
         }
     }
 
@@ -103,7 +105,7 @@
     width: 24px;
     height: 24px;
     left: 32px;
-    top: 32px;
+    top: 36px;
 }
 
   /* Color/shape of burger icon bars */
