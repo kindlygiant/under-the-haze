@@ -22,7 +22,7 @@ class App extends React.Component{
             <Router>
                 <div className="app">
                     <Header location={location}></Header>
-                    <main>
+                    <main id="page-wrap">
                         <Route exact path="/" component={Home} />
                         <Route path="/overview" component={Overview} />
                         <Route path="/episodes" component={Episodes} />

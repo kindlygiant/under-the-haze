@@ -114,8 +114,16 @@
 }
 
 .bm-cross-button {
-    height: 24px;
+    position: fixed;
     width: 24px;
+    height: 24px;
+    left: 32px;
+    top: 36px;
+
+    span {
+        top: 0;
+        right: 0;
+    }
 }
 
 /* Color/shape of close button cross */
@@ -126,33 +134,37 @@
 /* General sidebar styles */
 .bm-menu {
     background: $primary;
-    padding: 2em 1.5em 0;
+    padding: 32px;
     font-size: 1.15em;
-  }
-   
-  /* Morph shape necessary with bubble or elastic */
-  .bm-morph-shape {
+}
+
+.bm-menu-wrap {
+    top: 100px;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
     fill: $primary;
-  }
-   
-  /* Wrapper for item list */
-  .bm-item-list {
+}
+
+/* Wrapper for item list */
+.bm-item-list {
     color: $on-primary;
     width: 100%;
-  }
-   
-  /* Individual item */
-  .bm-item {
+}
+
+/* Individual item */
+.bm-item {
     display: inline-block;
     font-size:1.4em;
     padding:1em 0;
     text-align:left;
     a{
         padding-left:0;
-      }
-  }
-   
-  /* Styling of overlay */
-  .bm-overlay {
+    }
+}
+
+/* Styling of overlay */
+.bm-overlay {
     background: $background-color;
-  }
+}

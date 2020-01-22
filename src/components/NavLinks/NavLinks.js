@@ -23,7 +23,7 @@ function FormatNavLinks(props) {
     );
     if (listItems && props.isMobile) {
         return (
-            <Menu isOpen={false}>
+            <Menu isOpen={false} width={"100%"} pageWrapId={"page-wrap"} outerContainerId={"app"} customCrossIcon={ false } noOverlay>
                 {listItems}
             </Menu>
         )
