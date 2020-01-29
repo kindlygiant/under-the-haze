@@ -48,7 +48,7 @@
         width: 100%;
         text-align: center;
     }
-    
+
     .episode-description {
         text-align: center;
     }
@@ -60,6 +60,28 @@
     img {
         height: 100%;
         width: 100%;
+    }
+
+    @media only screen and (min-width: 768px) {
+        overflow: auto;
+        .content-left {
+            float: left;
+            width: 50%;
+            img {
+                height: 200px;
+                width: 200px;
+            }
+        }
+
+        .content-right {
+            float: right;
+            width: 50%;
+
+            .latest-episode {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
 }
 
@@ -85,6 +107,30 @@
             text-align: center;
         }
     }
+
+    @media only screen and (min-width: 768px) {
+        h3.section-header {
+            width: 50%;
+            margin: 32px auto;
+        }
+
+        .episodes {
+            width: 90%;
+            margin: auto;
+        }
+
+        .episode {
+            width: 25%;
+            display: inline-block;
+            margin: 24px 36px;
+        }
+
+        .thumbnail {
+            height: 100px;
+            width: 100px;
+        }
+    }
+    
 }
 
 .slot-3 {

@@ -30,7 +30,7 @@
         .active-date {
             font-size: 12px;
             font-family: $font-serif;
-            font-weight: 100px;
+            font-weight: 100;
         }
         .episode-title {
             font-weight: 900;
@@ -60,17 +60,15 @@
         height: $thumbnail-size;
     }
 
-    @media only screen and (max-width: 768px) {
-        .left {
-            float:left;
-            width: 40%;
-            height: $thumbnail-size-mobile;
-        }
-        .right {
-            float: right;
-            width: 60%;
-            height: $thumbnail-size-mobile;
-        }
+    .left {
+        float:left;
+        width: 40%;
+        height: $thumbnail-size-mobile;
+    }
+    .right {
+        float: right;
+        width: 60%;
+        height: $thumbnail-size-mobile;
     }
 }
 
