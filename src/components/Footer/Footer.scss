@@ -1,0 +1,18 @@
+@import '../../css/variables.scss';
+
+.footer {
+    text-align: center;
+    padding: 40px 0;
+
+    .logo {
+        padding: 40px 0;
+    }
+
+    li {
+        padding: 16px;
+    }
+
+    a {
+        position: unset;
+    }
+}

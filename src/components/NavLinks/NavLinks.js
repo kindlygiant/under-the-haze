@@ -23,7 +23,7 @@ function FormatNavLinks(props) {
     );
     if (listItems && props.isMobile) {
         return (
-            <Menu isOpen={false}>
+            <Menu isOpen={false} width={"100%"} pageWrapId={"page-wrap"} outerContainerId={"app"} customCrossIcon={ false } noOverlay>
                 {listItems}
             </Menu>
         )
@@ -56,14 +56,12 @@ class NavLinks extends React.Component{
 
     render(){
         return (
-            <div>
-                <FormatNavLinks 
-                    links={linkList} 
-                    active={this.state.active} 
-                    isMobile={this.isMobile}
-                    handler={this._handleClick}>
-                </FormatNavLinks>
-            </div>
+            <FormatNavLinks 
+                links={linkList} 
+                active={this.state.active} 
+                isMobile={this.isMobile}
+                handler={this._handleClick}>
+            </FormatNavLinks>
         );
     }
 }

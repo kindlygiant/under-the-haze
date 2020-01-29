@@ -6,6 +6,9 @@ import './App.scss';
 
 //Components
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer'
+
+//Containers
 import Home from '../Home/Home';
 import Overview from '../Overview/Overview';
 import Episodes from '../Episodes/Episodes';
@@ -22,7 +25,7 @@ class App extends React.Component{
             <Router>
                 <div className="app">
                     <Header location={location}></Header>
-                    <main>
+                    <main id="page-wrap">
                         <Route exact path="/" component={Home} />
                         <Route path="/overview" component={Overview} />
                         <Route path="/episodes" component={Episodes} />
@@ -32,6 +35,7 @@ class App extends React.Component{
                         <Route path="/listen" component={Listen} />
                         <Route path="/contact" component={Contact} />
                     </main>
+                    <Footer></Footer>
                 </div>
             </Router>
         );

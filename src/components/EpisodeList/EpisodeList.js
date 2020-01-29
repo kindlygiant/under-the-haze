@@ -9,8 +9,9 @@ import episodeList from './EpisodeList.json';
 
 //Components
 function Episodes(props) {
-    const episodeList = props.episodes.filter(props.filter);
-    const listItems = episodeList.map((episode) => 
+    const filteredList = props.episodes.filter(props.filter);
+    const sortedList = filteredList.sort(props.sort);
+    const listItems = sortedList.map((episode) => 
         <Episode
             id={episode.id}
             key={episode.id}
@@ -36,15 +37,41 @@ function Episodes(props) {
 }
 
 class EpisodeList extends React.Component{
+    
+    MostRecentEpisodesFilter(episode) {
+        return new Date(episode.active_date) < new Date()
+    }
+
+    highToLowSort(a, b) {
+        return a.id < b.id;
+    }
+
+    lowToHighSort(a, b) {
+        return b.id > a.id
+    }
+
     constructor(props){
         super(props);
-        this.filter = props.filter;
+        if(props.filter){
+            this.filter = props.filter;
+        }
+        else {
+            this.filter = this.MostRecentEpisodesFilter
+        }
+
+        if(props.sort){
+            this.sort = props.sort;
+        }
+        else {
+            this.sort = this.HighToLowSort;
+        }
     }
+
     render(){
         return (
             <div className="episodes">
                 
-                <Episodes episodes={episodeList} filter={this.filter}/>
+                <Episodes episodes={episodeList} filter={this.filter} sort={this.sort}/>
             </div>
         );
     }
