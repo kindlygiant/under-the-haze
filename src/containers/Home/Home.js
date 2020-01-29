@@ -4,7 +4,8 @@ import EpisodeList from '../../components/EpisodeList/EpisodeList'
 //Styling
 import './Home.scss';
 
-//Components
+//Assets
+import thumbnail from "../../assets/img/placeholder.png";
 
 class Home extends React.Component{        
 
@@ -32,7 +33,10 @@ class Home extends React.Component{
             <div className="home">
 
                 <div className="content slot-1">
-                    <h3  className="section-header">
+                    <div className="content-image">
+                        <img src={thumbnail} alt="Content"></img>
+                    </div>
+                    <h3 className="section-header">
                         <span>New This Week</span>
                     </h3>
                     <div className="latest-episode">
@@ -49,6 +53,11 @@ class Home extends React.Component{
                         <EpisodeList filter={this.MostRecentEpisodesFilter}>
 
                         </EpisodeList>
+                    </div>
+                    <div className="all-episodes-link"> 
+                        <a href="/episodes">
+                            See All Episodes
+                        </a>
                     </div>
                 </div>
                 <div className="content slot-3">

@@ -8,6 +8,10 @@
     @media only screen and (max-width: 768px) {
         padding: 16px 32px;
     }
+    
+    div {
+        background: inherit;
+    }
 
     h3.section-header {
         font-family: $font-serif;
@@ -26,6 +30,37 @@
             padding:0 48px; 
         }
     } 
+
+    a {
+        text-decoration: underline;
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+.slot-1 {
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .episode-description {
+        text-align: center;
+    }
+
+    .episode {
+        border-bottom: none;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .slot-2 {
@@ -36,6 +71,18 @@
         border-bottom: 1px solid $tertiary-variant; 
         span {
             color: $tertiary-variant;
+        }
+    }
+
+    a {
+        color: $on-secondary;
+        text-align: left;
+    }
+
+    .all-episodes-link {
+        padding: 8px 0 32px 0;
+        a {
+            text-align: center;
         }
     }
 }

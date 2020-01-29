@@ -2,16 +2,19 @@ import React from 'react';
 //Styling
 import './Episode.scss';
 
+import thumbnail from "../../assets/img/placeholder.png";
+
 //Components
 class Episode extends React.Component{ 
     constructor(props) {
         super(props);
         this.id = props.id;
-        this.thumbnail = props.thumbnail;
+        this.thumbnail = thumbnail; // You can add some logic to swap out the image later
         this.title = props.title;
         this.description = props.description;
         this.duration = props.duration;
         this.active_date = props.active_date;
+        this.link = "/episode/" + this.id;
     }
 
     render(){
@@ -36,6 +39,11 @@ class Episode extends React.Component{
                 </div>
                 <div className="episode-description">
                     {this.description}
+                </div>
+                <div className="episode-link">
+                    <a href={this.link}>
+                        Episode Page
+                    </a>
                 </div>
             </div>
         );

@@ -4,16 +4,12 @@
     background: $background-color-surface;
     color: $tertiary-variant-2;
     display: flex;
-
+    border-bottom: 1px solid white;
+    padding-bottom: 24px;
     margin-bottom: 24px;
 
     @media only screen and (max-width: 768px) {
         display: block;
-    }
-
-    &:not(:last-of-type) {
-        border-bottom: 1px solid white;
-        padding-bottom: 24px;
     }
 
     .thumbnail {
