@@ -2,7 +2,7 @@
 
 .content {
     background-color: $background-color;
-    padding: 40px;
+    padding: 40px 100px;
     text-align: center;
 
     @media only screen and (max-width: 768px) {
@@ -68,18 +68,30 @@
             float: left;
             width: 50%;
             img {
-                height: 200px;
-                width: 200px;
+                height: 400px;
+                width: 400px;
             }
         }
 
         .content-right {
-            float: right;
-            width: 50%;
+            width: 400px;
+            margin: auto;
+            display: inline-block;
 
-            .latest-episode {
+            .episode {
                 display: flex;
                 flex-direction: column;
+            }
+
+            div {
+                padding: 0;
+            }
+
+            .episode-link {
+                padding: 16px;
+                a {
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -115,7 +127,6 @@
         }
 
         .episodes {
-            width: 90%;
             margin: auto;
         }
 
