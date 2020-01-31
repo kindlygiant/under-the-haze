@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 //Styling
 import './Episode.scss';
 
@@ -41,9 +42,9 @@ class Episode extends React.Component{
                     {this.description}
                 </div>
                 <div className="episode-link">
-                    <a href={this.link}>
+                    <Link to={this.link}>
                         Episode Page
-                    </a>
+                    </Link>
                 </div>
             </div>
         );
