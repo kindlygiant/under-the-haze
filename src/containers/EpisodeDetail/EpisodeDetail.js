@@ -15,7 +15,7 @@ class EpisodeDetail extends React.Component{
 
     render(){
         return (
-            <div className="episode_detail_page">
+            <div className="episode-detail-page">
                 <EpisodeList episodeId={this.id}/>
             </div>
         );
