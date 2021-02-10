@@ -109,6 +109,10 @@
         }
     }
 
+    li {
+        display: inline;
+    }
+
     a {
         color: $on-secondary;
         text-align: left;
