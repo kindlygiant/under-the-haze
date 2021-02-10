@@ -7,7 +7,7 @@ import './Episodes.scss';
 class Episodes extends React.Component{
     render(){
         return (
-            <div className="episode-page">
+            <div className="content episode-page">
                 <EpisodeList/>
             </div>
         );

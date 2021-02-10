@@ -20,11 +20,6 @@ class Home extends React.Component{
         return (new Date(episode.active_date) < new Date()) && !(episode.id === mostRecentId)
     }
 
-    //Sorts
-    lowToHighSort(a, b) {
-        return b.id - a.id
-    }
-
     render(){
         return (
             <div className="home">
