@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 //Styling
 import './App.scss';
@@ -19,26 +19,32 @@ import Listen from '../Listen/Listen';
 import Contact from '../Contact/Contact';
 import EpisodeDetail from '../EpisodeDetail/EpisodeDetail';
 
+//Error Handling
+import Error from '../Error/Error';
+
 class App extends React.Component{
     render(){
         const { location } = this.props;
         return (
             <Router>
-                <div className="app">
-                    <Header location={location}></Header>
-                    <main id="page-wrap">
-                        <Route exact path="/" component={Home} />
-                        <Route path="/overview" component={Overview} />
-                        <Route path="/episode/:id" component={EpisodeDetail} />
-                        <Route path="/episodes" component={Episodes} />
-                        <Route path="/music" component={Music} />
-                        <Route path="/about" component={About} />
-                        <Route path="/donate" component={Donate} />
-                        <Route path="/listen" component={Listen} />
-                        <Route path="/contact" component={Contact} />
-                    </main>
-                    <Footer></Footer>
-                </div>
+                <Switch>
+                    <div className="app">
+                        <Header location={location}></Header>
+                        <main id="page-wrap">
+                            <Route exact path="/" component={Home} />
+                            <Route path="/overview" component={Overview} />
+                            <Route path="/episode/:id" component={EpisodeDetail} />
+                            <Route path="/episodes" component={Episodes} />
+                            <Route path="/music" component={Music} />
+                            <Route path="/about" component={About} />
+                            <Route path="/donate" component={Donate} />
+                            <Route path="/listen" component={Listen} />
+                            <Route path="/contact" component={Contact} />
+                            <Route component={Error} />
+                        </main>
+                        <Footer></Footer>
+                    </div>
+                </Switch>
             </Router>
         );
     }
