@@ -3,14 +3,16 @@ import React from 'react';
 import './Music.scss';
 
 //Components
+import MusicPlayer from '../../components/MusicPlayer/MusicPlayer'
 
 class Music extends React.Component{
     render(){
         return (
             <div className="content music">
                 <p>
-                    No music yet! But we're working hard on it!
+                    We have one song. This is it.
                 </p>
+                <MusicPlayer/>
             </div>
         );
     }
