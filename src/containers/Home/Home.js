@@ -28,6 +28,10 @@ class Home extends React.Component{
         return episode.id === mostRecentId;
     }
 
+    lowToHighSort(a, b) {
+        return b.id - a.id
+    }
+
     render(){
         return (
             <div className="home">
@@ -54,7 +58,7 @@ class Home extends React.Component{
                         <span>Recently Aired</span>
                     </h3>
                     <div className="recent-episodes">
-                        <EpisodeList filter={this.MostRecentEpisodesFilter}>
+                        <EpisodeList filter={this.MostRecentEpisodesFilter} sort={this.lowToHighSort}>
 
                         </EpisodeList>
                     </div>

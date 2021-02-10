@@ -50,11 +50,11 @@ class EpisodeList extends React.Component{
     }
 
     highToLowSort(a, b) {
-        return a.id < b.id;
+        return a.id - b.id;
     }
 
     lowToHighSort(a, b) {
-        return b.id > a.id
+        return b.id - a.id
     }
 
     constructor(props){
@@ -70,7 +70,7 @@ class EpisodeList extends React.Component{
             this.sort = props.sort;
         }
         else {
-            this.sort = this.HighToLowSort;
+            this.sort = this.highToLowSort;
         }
         this.episodeId = props.episodeId
     }
