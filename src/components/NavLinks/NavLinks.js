@@ -23,7 +23,7 @@ function FormatNavLinks(props) {
     );
     if (listItems && props.isMobile) {
         return (
-            <Menu isOpen={false} width={"100%"} pageWrapId={"page-wrap"} outerContainerId={"app"} customCrossIcon={ false } noOverlay>
+            <Menu isOpen={props.menuOpen} onStateChange={(state => props.stateChange(state))} width={"100%"} pageWrapId={"page-wrap"} outerContainerId={"app"} customCrossIcon={ false } noOverlay>
                 {listItems}
             </Menu>
         )
@@ -44,22 +44,39 @@ class NavLinks extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            active: '/home'
+            active: '/home',
+            menuOpen: false
         }
         this.isMobile = props.isMobile;
+        this.handleStateChange = this.handleStateChange.bind(this);
         this._handleClick = this._handleClick.bind(this);
     }
 
+    handleStateChange(state) {
+        this.setState({menuOpen: state.isOpen});
+    }
+
+    closeMenu(){
+        this.setState({menuOpen: false});
+    }
+    
+    toggleMenu(){
+        this.setState(state =>({menuOpen: !state.menuOpen}));
+    }
+
     _handleClick(menuItem) { 
-        this.setState({ active: menuItem });
+        this.setState({ active: menuItem});
+        this.closeMenu();
     }
 
     render(){
         return (
             <FormatNavLinks 
                 links={linkList} 
-                active={this.state.active} 
+                active={this.state.active}
+                menuOpen={this.state.menuOpen}
                 isMobile={this.isMobile}
+                stateChange={this.handleStateChange}
                 handler={this._handleClick}>
             </FormatNavLinks>
         );

@@ -27,10 +27,10 @@ class App extends React.Component{
         const { location } = this.props;
         return (
             <Router>
-                <Switch>
-                    <div className="app">
-                        <Header location={location}></Header>
-                        <main id="page-wrap">
+                <div className="app">
+                    <Header location={location}></Header>
+                    <main id="page-wrap">
+                        <Switch>
                             <Route exact path="/" component={Home} />
                             <Route path="/overview" component={Overview} />
                             <Route path="/episode/:id" component={EpisodeDetail} />
@@ -41,10 +41,10 @@ class App extends React.Component{
                             <Route path="/listen" component={Listen} />
                             <Route path="/contact" component={Contact} />
                             <Route component={Error} />
-                        </main>
-                        <Footer></Footer>
-                    </div>
-                </Switch>
+                        </Switch>
+                    </main>
+                    <Footer></Footer>
+                </div>
             </Router>
         );
     }
