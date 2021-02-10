@@ -1,0 +1,20 @@
+li {
+    padding: 0; 
+    list-style: outside none none;
+}
+
+a {
+    padding: 0;
+    color: $on-primary;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    &:link {
+        text-decoration: none;
+    }
+
+    &:visited {
+        text-decoration: none;
+    }
+}
