@@ -9,6 +9,7 @@ import episodeList from './EpisodeList.json';
 
 //Components
 function Episodes(props) {
+    let finalList;
     let filteredList;
     if(props.episodeId){
         filteredList = props.episodes.filter((episode) => episode.id === props.episodeId);
@@ -16,7 +17,14 @@ function Episodes(props) {
         filteredList = props.episodes.filter(props.filter);
     }
     const sortedList = filteredList.sort(props.sort);
-    const listItems = sortedList.map((episode) => 
+    if(props.returnCount){
+        const truncatedList = sortedList.slice(0,props.returnCount);
+        finalList = truncatedList;
+    }
+    else{
+        finalList = sortedList;
+    }
+    const listItems = finalList.map((episode) => 
         <li>
             <Episode
                 id={episode.id}
@@ -44,11 +52,12 @@ function Episodes(props) {
 }
 
 class EpisodeList extends React.Component{
-    
-    MostRecentEpisodesFilter(episode) {
+    //Filter Algorithms
+    ActiveEpisodesFilter(episode) {
         return new Date(episode.active_date) < new Date()
     }
 
+    //Sort Algorithms
     highToLowSort(a, b) {
         return a.id - b.id;
     }
@@ -59,18 +68,37 @@ class EpisodeList extends React.Component{
 
     constructor(props){
         super(props);
-        if(props.filter){
+        if(props.filter && typeof props.filter === "function"){
             this.filter = props.filter;
         }
         else {
-            this.filter = this.MostRecentEpisodesFilter
+            this.filter = this.ActiveEpisodesFilter
         }
 
-        if(props.sort){
+        if(props.sort && typeof props.sort === "function"){
             this.sort = props.sort;
         }
+        else if (props.sort && (typeof props.sort === "string" || props.sort instanceof String)){
+            switch(props.sort){
+                case 'highToLow':
+                    this.sort = this.highToLowSort;
+                    break;
+                case 'lowToHigh':
+                    this.sort = this.lowToHighSort;
+                    break;
+                default:
+                    this.sort = this.lowToHighSort;
+            }
+        }
         else {
-            this.sort = this.highToLowSort;
+            this.sort = this.lowToHighSort;
+        }
+
+        if(props.returnCount){
+            this.returnCount = props.returnCount; //slice starts at index 0
+        }
+        else {
+            this.returnCount = null;
         }
         this.episodeId = props.episodeId
     }
@@ -83,6 +111,7 @@ class EpisodeList extends React.Component{
                     episodeId={this.episodeId} 
                     filter={this.filter} 
                     sort={this.sort}
+                    returnCount={this.returnCount}
                 />
             </div>
         );

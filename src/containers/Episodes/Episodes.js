@@ -5,14 +5,10 @@ import EpisodeList from '../../components/EpisodeList/EpisodeList';
 import './Episodes.scss';
 
 class Episodes extends React.Component{
-    MostRecentEpisodesFilter(episode) {
-        return new Date(episode.active_date) < new Date()
-    }
-
     render(){
         return (
             <div className="episode-page">
-                <EpisodeList filter={this.MostRecentEpisodesFilter}/>
+                <EpisodeList/>
             </div>
         );
     }

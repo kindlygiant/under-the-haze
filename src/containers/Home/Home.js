@@ -20,14 +20,7 @@ class Home extends React.Component{
         return (new Date(episode.active_date) < new Date()) && !(episode.id === mostRecentId)
     }
 
-    LatestEpisodeFilter(episode, index, episodeList) {
-        let mostRecentId = -1;
-        for ( var i = 0; i < episodeList.length ; i++) {
-            if (episodeList[i].id > mostRecentId) mostRecentId = episodeList[i].id;
-        }
-        return episode.id === mostRecentId;
-    }
-
+    //Sorts
     lowToHighSort(a, b) {
         return b.id - a.id
     }
@@ -47,7 +40,7 @@ class Home extends React.Component{
                             <span>New This Week</span>
                         </h3>
                         <div className="latest-episode">
-                            <EpisodeList filter={this.LatestEpisodeFilter}>
+                            <EpisodeList sort={'lowToHighSort'} returnCount={1}>
 
                             </EpisodeList>
                         </div>
@@ -58,7 +51,7 @@ class Home extends React.Component{
                         <span>Recently Aired</span>
                     </h3>
                     <div className="recent-episodes">
-                        <EpisodeList filter={this.MostRecentEpisodesFilter} sort={this.lowToHighSort}>
+                        <EpisodeList filter={this.MostRecentEpisodesFilter} sort={'lowToHighSort'} returnCount={3}>
 
                         </EpisodeList>
                     </div>
