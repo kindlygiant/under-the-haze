@@ -7,7 +7,7 @@ import './Listen.scss';
 class Listen extends React.Component{
     render(){
         return (
-            <div className="overview">
+            <div className="content listen">
                 <p>
                     It's a podcast... You listen with your ears dummy.
                 </p>

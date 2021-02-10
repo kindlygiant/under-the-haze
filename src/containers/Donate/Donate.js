@@ -7,16 +7,17 @@ import './Donate.scss';
 class Donate extends React.Component{
     render(){
         return (
-            <div className="donate">
+            <div className="content donate">
                 <p>
-                    Right now we only take donations in the form of cryptic and mildly threatening notes made from newspaper and magazine clippings sent to this P.O. Box:
+                    Patreon? I guess we could do that.
                 </p>
-                <div className="address">
-                    <p>Note to self: get a P.O. Box</p>
-                </div>
+                <button>Become a supporter
+                </button>
+                <br></br>
                 <p>
-                    Please don't put a return address.
+                    Kofi is a thing for one time donations right?
                 </p>
+                <button>Buy the crew a pizza</button>
             </div>
         );
     }
