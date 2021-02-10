@@ -1,7 +1,7 @@
 [
     { 
         "id":"1", 
-        "active_date": "2019-12-13T00:00:00Z",
+        "active_date": "2019-12-12T00:00:00Z",
         "title":"Freedom", 
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in felis quam. Pellentesque scelerisque vehicula sapien, lacinia pulvinar dui interdum at. Nam vulputate mattis felis, at malesuada lectus ullamcorper quis.", 
         "duration":"30m", 
@@ -27,6 +27,14 @@
         "id":"4", 
         "active_date": "2019-12-15T00:00:00Z",
         "title":"Tyrant", 
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in felis quam. Pellentesque scelerisque vehicula sapien, lacinia pulvinar dui interdum at. Nam vulputate mattis felis, at malesuada lectus ullamcorper quis.", 
+        "duration":"29m", 
+        "thumbnail":"../../assets/img/GrandCanyon_poster_landscape_desktop.png"
+    },
+    { 
+        "id":"5", 
+        "active_date": "2020-12-15T00:00:00Z",
+        "title":"Swiftwater", 
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in felis quam. Pellentesque scelerisque vehicula sapien, lacinia pulvinar dui interdum at. Nam vulputate mattis felis, at malesuada lectus ullamcorper quis.", 
         "duration":"29m", 
         "thumbnail":"../../assets/img/GrandCanyon_poster_landscape_desktop.png"
