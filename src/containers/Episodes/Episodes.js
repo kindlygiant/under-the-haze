@@ -11,7 +11,7 @@ class Episodes extends React.Component{
 
     render(){
         return (
-            <div className="episode_page">
+            <div className="episode-page">
                 <EpisodeList filter={this.MostRecentEpisodesFilter}/>
             </div>
         );

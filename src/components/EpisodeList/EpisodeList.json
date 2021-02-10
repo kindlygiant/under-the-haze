@@ -5,7 +5,7 @@
         "title":"Freedom", 
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in felis quam. Pellentesque scelerisque vehicula sapien, lacinia pulvinar dui interdum at. Nam vulputate mattis felis, at malesuada lectus ullamcorper quis.", 
         "duration":"30m", 
-        "thumbnail":"../../assets/img/placeholder.png"
+        "thumbnail":"../../assets/img/GrandCanyon_poster_landscape_desktop.png"
     },
     { 
         "id":"2", 
@@ -13,7 +13,7 @@
         "title":"Caravan", 
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in felis quam. Pellentesque scelerisque vehicula sapien, lacinia pulvinar dui interdum at. Nam vulputate mattis felis, at malesuada lectus ullamcorper quis.", 
         "duration":"29m", 
-        "thumbnail":"/src/assets/img/placeholder.png"
+        "thumbnail":"../../assets/img/GrandCanyon_poster_landscape_desktop.png"
     },
     { 
         "id":"3", 
@@ -21,7 +21,7 @@
         "title":"Black Mountain", 
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in felis quam. Pellentesque scelerisque vehicula sapien, lacinia pulvinar dui interdum at. Nam vulputate mattis felis, at malesuada lectus ullamcorper quis.", 
         "duration":"29m", 
-        "thumbnail":"../../assets/img/placeholder.png"
+        "thumbnail":"../../assets/img/GrandCanyon_poster_landscape_desktop.png"
     },
     { 
         "id":"4", 
@@ -29,6 +29,6 @@
         "title":"Tyrant", 
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in felis quam. Pellentesque scelerisque vehicula sapien, lacinia pulvinar dui interdum at. Nam vulputate mattis felis, at malesuada lectus ullamcorper quis.", 
         "duration":"29m", 
-        "thumbnail":"../../assets/img/placeholder.png"
+        "thumbnail":"../../assets/img/GrandCanyon_poster_landscape_desktop.png"
     }
 ]

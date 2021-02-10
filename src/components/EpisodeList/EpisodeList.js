@@ -17,15 +17,17 @@ function Episodes(props) {
     }
     const sortedList = filteredList.sort(props.sort);
     const listItems = sortedList.map((episode) => 
-        <Episode
-            id={episode.id}
-            key={episode.id}
-            thumbnail={episode.thumbnail}
-            title={episode.title}
-            description={episode.description}
-            duration={episode.duration}
-            active_date={episode.active_date}>
-        </Episode>
+        <li>
+            <Episode
+                id={episode.id}
+                key={episode.id}
+                thumbnail={episode.thumbnail}
+                title={episode.title}
+                description={episode.description}
+                duration={episode.duration}
+                active_date={episode.active_date}>
+            </Episode>
+        </li>
     );
     if(listItems){
         return (
@@ -76,7 +78,6 @@ class EpisodeList extends React.Component{
     render(){
         return (
             <div className="episodes">
-                
                 <Episodes 
                     episodes={episodeList} 
                     episodeId={this.episodeId} 

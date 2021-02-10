@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 //Styling
 import './Episode.scss';
 
-import thumbnail from "../../assets/img/placeholder.png";
+import thumbnail from "../../assets/img/GrandCanyon_poster_landscape_desktop.png"
 
 //Components
 class Episode extends React.Component{ 

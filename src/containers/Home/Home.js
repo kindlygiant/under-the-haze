@@ -5,7 +5,7 @@ import EpisodeList from '../../components/EpisodeList/EpisodeList'
 import './Home.scss';
 
 //Assets
-import thumbnail from "../../assets/img/placeholder.png";
+import thumbnail from "../../assets/img/GrandCanyon_poster_landscape_desktop.png";
 
 class Home extends React.Component{        
 
