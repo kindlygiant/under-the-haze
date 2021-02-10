@@ -17,6 +17,7 @@ import About from '../About/About';
 import Donate from '../Donate/Donate';
 import Listen from '../Listen/Listen';
 import Contact from '../Contact/Contact';
+import EpisodeDetail from '../EpisodeDetail/EpisodeDetail';
 
 class App extends React.Component{
     render(){
@@ -28,6 +29,7 @@ class App extends React.Component{
                     <main id="page-wrap">
                         <Route exact path="/" component={Home} />
                         <Route path="/overview" component={Overview} />
+                        <Route path="/episode/:id" component={EpisodeDetail} />
                         <Route path="/episodes" component={Episodes} />
                         <Route path="/music" component={Music} />
                         <Route path="/about" component={About} />

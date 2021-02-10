@@ -9,7 +9,12 @@ import episodeList from './EpisodeList.json';
 
 //Components
 function Episodes(props) {
-    const filteredList = props.episodes.filter(props.filter);
+    let filteredList;
+    if(props.episodeId){
+        filteredList = props.episodes.filter((episode) => episode.id === props.episodeId);
+    } else {
+        filteredList = props.episodes.filter(props.filter);
+    }
     const sortedList = filteredList.sort(props.sort);
     const listItems = sortedList.map((episode) => 
         <li>
@@ -67,12 +72,18 @@ class EpisodeList extends React.Component{
         else {
             this.sort = this.HighToLowSort;
         }
+        this.episodeId = props.episodeId
     }
 
     render(){
         return (
             <div className="episodes">
-                <Episodes episodes={episodeList} filter={this.filter} sort={this.sort}/>
+                <Episodes 
+                    episodes={episodeList} 
+                    episodeId={this.episodeId} 
+                    filter={this.filter} 
+                    sort={this.sort}
+                />
             </div>
         );
     }

@@ -33,16 +33,20 @@ class Home extends React.Component{
             <div className="home">
 
                 <div className="content slot-1">
-                    <div className="content-image">
-                        <img src={thumbnail} alt="Content"></img>
+                    <div className="content-left">
+                        <div className="content-image">
+                            <img src={thumbnail} alt="Content"></img>
+                        </div>
                     </div>
-                    <h3 className="section-header">
-                        <span>New This Week</span>
-                    </h3>
-                    <div className="latest-episode">
-                        <EpisodeList filter={this.LatestEpisodeFilter}>
+                    <div className="content-right">
+                        <h3 className="section-header">
+                            <span>New This Week</span>
+                        </h3>
+                        <div className="latest-episode">
+                            <EpisodeList filter={this.LatestEpisodeFilter}>
 
-                        </EpisodeList>
+                            </EpisodeList>
+                        </div>
                     </div>
                 </div>
                 <div className="content slot-2">

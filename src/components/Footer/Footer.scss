@@ -16,10 +16,20 @@
         position: unset;
     }
 
-    .legal {
-        padding: 16px 0; 
-        border-top: 1px solid $tertiary;
-        margin-top: 16px;
-        font-size: 12px;
+    @media only screen and (min-width: 768px) {
+        .mobile {
+            display: inline-block;
+        }
+        .links {
+            display: flex;
+            align-items: baseline;
+            margin: auto;
+        }
+        .legal {
+            padding: 16px 0; 
+            border-top: 1px solid $tertiary;
+            margin-top: 16px;
+            font-size: 12px;
+        }
     }
 }

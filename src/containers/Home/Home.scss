@@ -2,7 +2,7 @@
 
 .content {
     background-color: $background-color;
-    padding: 40px;
+    padding: 40px 100px;
     text-align: center;
 
     @media only screen and (max-width: 768px) {
@@ -36,6 +36,7 @@
         display: block;
         font-size: 12px;
         font-weight: 400;
+        position: unset;
     }
 }
 
@@ -48,7 +49,7 @@
         width: 100%;
         text-align: center;
     }
-    
+
     .episode-description {
         text-align: center;
     }
@@ -60,6 +61,40 @@
     img {
         height: 100%;
         width: 100%;
+    }
+
+    @media only screen and (min-width: 768px) {
+        overflow: auto;
+        .content-left {
+            float: left;
+            width: 50%;
+            img {
+                height: 400px;
+                width: 400px;
+            }
+        }
+
+        .content-right {
+            width: 400px;
+            margin: auto;
+            display: inline-block;
+
+            .episode {
+                display: flex;
+                flex-direction: column;
+            }
+
+            div {
+                padding: 0;
+            }
+
+            .episode-link {
+                padding: 16px;
+                a {
+                    font-weight: bold;
+                }
+            }
+        }
     }
 }
 
@@ -85,6 +120,29 @@
             text-align: center;
         }
     }
+
+    @media only screen and (min-width: 768px) {
+        h3.section-header {
+            width: 50%;
+            margin: 32px auto;
+        }
+
+        .episodes {
+            margin: auto;
+        }
+
+        .episode {
+            width: 25%;
+            display: inline-block;
+            margin: 24px 36px;
+        }
+
+        .thumbnail {
+            height: 100px;
+            width: 100px;
+        }
+    }
+    
 }
 
 .slot-3 {
