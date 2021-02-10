@@ -33,6 +33,7 @@
     .nav {
         box-sizing: border-box;
         a {
+            width: 100%;
             padding: 0;
             color: $on-primary;
             position: relative;
@@ -90,10 +91,17 @@
     .mobile {
         display:none;
         li {
-            padding: 8px 0; 
+            padding: 8px 0 8px 32px; 
         }
         @media only screen and (max-width: 768px){
             display: block;
+        }
+
+        .social {
+            height: 50%;
+            width: 100%;
+            margin-top: 48px;
+            background-color: $tertiary-variant-2;
         }
     }
 }
@@ -134,7 +142,6 @@
 /* General sidebar styles */
 .bm-menu {
     background: $primary;
-    padding: 32px;
     font-size: 1.15em;
 }
 
