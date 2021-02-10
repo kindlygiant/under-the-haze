@@ -7,7 +7,7 @@ import './Music.scss';
 class Music extends React.Component{
     render(){
         return (
-            <div className="Music">
+            <div className="content music">
                 <p>
                     No music yet! But we're working hard on it!
                 </p>

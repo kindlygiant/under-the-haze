@@ -1,0 +1,21 @@
+.cast-tile{
+    .content-left {
+        img{
+            height:auto;
+            width: 75%;
+        }
+    }
+
+    .content-right{
+        .name{
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .roles {
+            font-size: 12px;
+        }
+        .bio {
+            padding: 8px 0 24px 0;
+        }
+    }
+}
