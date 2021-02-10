@@ -1,23 +1,26 @@
 @import '../../css/variables.scss';
+@import '../../css/defaults.scss';
 
-li {
-    padding: 8px 0; 
-    list-style: outside none none;
-}
-
-a {
-    padding: 0;
-    color: $on-primary;
-    position: relative;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-
-    &:link {
-        text-decoration: none;
+.links{
+    li {
+        padding: 8px 0; 
+        list-style: outside none none;
     }
-    
-    &:visited {
-        text-decoration: none;
+
+    a {
+        padding: 0;
+        color: $on-primary;
+        position: relative;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        &:link {
+            text-decoration: none;
+        }
+        
+        &:visited {
+            text-decoration: none;
+        }
     }
 }

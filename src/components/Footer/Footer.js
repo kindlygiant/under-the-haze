@@ -21,6 +21,11 @@ class Footer extends React.Component{
                 <div className="mobile">
                     <NavLinks isMobile={false}></NavLinks>
                 </div>
+                <div className="legal">
+                    <span>2021 Under the Haze | </span>
+                    <span>Privacy Policy | </span>
+                    <span>Terms of Use</span>
+                </div>                                
             </div>
         );
     }
