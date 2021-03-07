@@ -9,7 +9,7 @@ class CastTile extends React.Component{
     constructor(props) {
         super(props);
         this.name = props.name;
-        this.portrait = portrait; // You can add some logic to swap out the image later
+        this.portrait = props.portrait; // You can add some logic to swap out the image later
         this.roles = props.roles;
         this.bio = props.bio;
     }

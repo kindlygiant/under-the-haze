@@ -14,7 +14,8 @@ function Cast(props) {
             <CastTile
                 name={castMember.name}
                 roles={castMember.roles}
-                bio={castMember.bio}>
+                bio={castMember.bio}
+                portrait={castMember.portrait}>
             </CastTile>
         </li>
     );

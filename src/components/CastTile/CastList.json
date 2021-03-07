@@ -2,11 +2,31 @@
     {
         "name":"Ryan Wright",
         "roles":"Writer, Director, Cast",
-        "bio":"He's got it going on"
+        "bio":"He's got it going on",
+        "portrait":"/img/ryan-portrait.png"
     },
     {
         "name":"Will Fosset",
         "roles":"Audio Director, Cast",
-        "bio":"He's groovin and movin"
+        "bio":"Went to college for music because food lmao",
+        "portrait":"/img/will-portrait.png"
+    },
+    {
+        "name":"Joe Gable",
+        "roles":"Audio Engineer, Cast",
+        "bio":"He's creamin' and dreamin'",
+        "portrait":"/img/joe-portrait.jpeg"
+    },
+    {
+        "name":"Rachael Havard",
+        "roles":"Cast",
+        "bio":"Did theatre in high school but didn't go to college for it because eating is important",
+        "portrait":"/img/rachael-portrait.jpg"
+    },
+    {
+        "name":"Mymi Hang",
+        "roles":"Designer",
+        "bio":"Do I have to have a bio?",
+        "portrait":"/img/placeholder.png"
     }
 ]
