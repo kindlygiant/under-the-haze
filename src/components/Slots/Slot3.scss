@@ -1,0 +1,11 @@
+@import '../../css/variables.scss';
+
+.content.slot-3 {
+    background: $tertiary-variant-2;
+
+    h2 {
+        font-family: $font-serif;
+        font-size: 22px;
+        font-weight: 500;
+    }
+}
