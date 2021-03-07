@@ -7,20 +7,10 @@
             padding-bottom: 0;
         }
     }
-    .episodes {
-        padding: $mobile-content-padding;
-    }
+
     .episode {
         padding-bottom: 80px;
-        margin: 0;
-        color: $on-primary;
-        border-bottom: 1px solid $tertiary;
-        background: $primary;
-        border-bottom: 1px solid $tertiary-variant;
-    
-        .episode-header{
-            padding: 0;
-
+        .episode-header {
             .left{
                 display: none;
             }
@@ -30,10 +20,13 @@
                 width: 100%;
             }
         }
+    }
 
-        .episode-link {
-            padding-top: 24px;
-            text-decoration: underline;
+    @include respond-above(sm) {
+        overflow: auto;
+        
+        .episode {
+            display: block;
         }
     }
 }

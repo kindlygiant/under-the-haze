@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 //Styling
 import './Episode.scss';
 
-import thumbnail from "../../assets/img/GrandCanyon_poster_landscape_desktop.png"
+import thumbnail from "../../assets/img/GrandCanyon_poster_landscape_desktop.png";
+import play_button from "../../assets/img/play_circle_outline-24px.png";
 
 //Components
 class Episode extends React.Component{ 
@@ -16,11 +17,15 @@ class Episode extends React.Component{
         this.duration = props.duration;
         this.active_date = props.active_date;
         this.link = "/episode/" + this.id;
+        this.audio = props.audio;
     }
 
     render(){
         return (
             <div className="episode">
+                <div className="episode-audio">
+                    <img className="audio-play" src={play_button}/>
+                </div>
                 <div className="episode-header split-content">
                     <div className="left">
                         <img className="thumbnail"

@@ -1,11 +1,11 @@
 @import '../../css/variables.scss';
 
 .content {
-    background-color: $background-color;
+    background: $background-color;
     padding: 40px 100px;
     text-align: center;
 
-    @media only screen and (max-width: 768px) {
+    @include respond-below(sm) {
         padding: $mobile-content-padding;
     }
     
@@ -23,7 +23,7 @@
         border-bottom: 1px solid $tertiary; 
         line-height: 0.1em;
         margin: 32px 0; 
-        background-color: inherit;
+        background: inherit;
     
         span { 
             background: inherit;
@@ -41,29 +41,37 @@
 }
 
 .slot-1 {
-    .left {
-        display: none;
-    }
-
-    .right {
+    .content-image img {
+        height: 100%;
         width: 100%;
-        text-align: center;
     }
-
-    .episode-description {
-        text-align: center;
+    .content-right {
+        padding-top: 40px;
     }
 
     .episode {
         border-bottom: none;
+        background: $primary;
+        color: $on-primary;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+
+        .left {
+            display: none;
+        }
+    
+        .right {
+            width: 100%;
+            text-align: center;
+        }
+    
+        .episode-description {
+            text-align: center;
+        }
     }
 
-    img {
-        height: 100%;
-        width: 100%;
-    }
 
-    @media only screen and (min-width: 768px) {
+    @include respond-above(sm) {
         overflow: auto;
         .content-left {
             float: left;
@@ -76,16 +84,14 @@
 
         .content-right {
             width: 400px;
+            padding-top: 0;
             margin: auto;
             display: inline-block;
 
             .episode {
                 display: flex;
                 flex-direction: column;
-            }
-
-            div {
-                padding: 0;
+                padding: 0 0;
             }
 
             .episode-link {
@@ -125,7 +131,19 @@
         }
     }
 
-    @media only screen and (min-width: 768px) {
+    .episode-header {
+        padding: 16px 0;
+
+        .active-date {
+            padding: 0;
+        }
+    }
+
+    .episode-audio {
+        display: none;
+    }
+
+    @include respond-above(sm) {
         h3.section-header {
             width: 50%;
             margin: 32px auto;
@@ -136,25 +154,19 @@
         }
 
         .episode {
+            background: $secondary;
+            color: $on-secondary;
             width: 25%;
             display: inline-block;
             margin: 24px 36px;
+            padding-bottom: 24px;
+
+            .thumbnail {
+                height: 100px;
+                width: 100px;
+            }
         }
 
-        .thumbnail {
-            height: 100px;
-            width: 100px;
-        }
     }
     
-}
-
-.slot-3 {
-    background: $tertiary-variant-2;
-
-    h2 {
-        font-family: $font-serif;
-        font-size: 22px;
-        font-weight: 500;
-    }
 }

@@ -1,47 +1,55 @@
 @import '../../css/variables.scss';
 
 .episode {
-    background: $background-color-surface;
-    color: $tertiary-variant-2;
-    display: flex;
-    border-bottom: 1px solid white;
-    padding-bottom: 24px;
-    margin-bottom: 24px;
+    padding: 20px 0;
+    margin: 0;
+    border-bottom: 1px solid $tertiary;
+    border-bottom: 1px solid $tertiary-variant;
 
-    @media only screen and (max-width: 768px) {
-        display: block;
-    }
-
-    .thumbnail {
-        background-color: $primary-variant;
-        height: $thumbnail-size;
-        width: $thumbnail-size;
-
-        @media only screen and (max-width: 768px) {
-            height: $thumbnail-size-mobile;
-            width: $thumbnail-size-mobile;
+    .episode-audio {
+        width: 100%;
+        img {
+            height: auto;
+            width: 48px;
         }
     }
+
     .episode-header {
         display: inline-block;
         text-align: left;
-        padding: 20px 0;
+
+        .thumbnail {
+            background-color: $primary-variant;
+            height: $thumbnail-size;
+            width: $thumbnail-size;
+    
+            @include respond-below(sm) {
+                height: $thumbnail-size-mobile;
+                width: $thumbnail-size-mobile;
+            }
+        }
 
         .active-date {
             font-size: 12px;
             font-family: $font-serif;
             font-weight: 100;
+            padding: 8px 0;
         }
         .episode-title {
             font-weight: bold;
             font-size: 22px;
         }
     }
+
     .episode-description {
         text-align: left;
         padding: 20px 0;
         font-size: 14px;
         letter-spacing: 1.2px;
+    }
+
+    .episode-link {
+        text-decoration: underline;
     }
 }
 
@@ -69,19 +77,5 @@
         float: right;
         width: 60%;
         height: $thumbnail-size-mobile;
-    }
-}
-
-.slot-1 {
-    .episode {
-        background-color: $primary;
-        color: $on-primary;
-    }
-}
-
-.slot-2 {
-    .episode{
-        background-color: $secondary;
-        color: $on-secondary;
     }
 }

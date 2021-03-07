@@ -1,5 +1,6 @@
 import React from 'react';
 import EpisodeList from '../../components/EpisodeList/EpisodeList';
+import Slot3 from '../../components/Slots/Slot3';
 
 //Styling
 import './Home.scss';
@@ -56,14 +57,7 @@ class Home extends React.Component{
                         </a>
                     </div>
                 </div>
-                <div className="content slot-3">
-                    <h2>
-                        <span>About Season 1</span>
-                    </h2>
-                    <p>
-                        Tertiary Content.
-                    </p>
-                </div>
+                <Slot3 header="About Season 1" content="This is content" />
             </div>
         );
     }

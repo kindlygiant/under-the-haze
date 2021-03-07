@@ -16,7 +16,7 @@
     .title{
         padding: 40px 0;
         font-family: 'LongShot', serif;
-        @media screen and (max-width:768px){
+        @include respond-below(sm) {
             width: 100%;
             text-align: right;
 
@@ -26,7 +26,7 @@
         }
     }
 
-    @media screen and (max-width:768px){
+    @include respond-below(sm) {
         display: inline-block;
     }
 
@@ -83,7 +83,7 @@
     .desktop {
         display:flex;
         align-items: baseline;
-        @media screen and (max-width:768px){
+        @include respond-below(sm) {
             display: none;
         }
     }
@@ -93,7 +93,7 @@
         li {
             padding: 8px 0 8px 32px; 
         }
-        @media only screen and (max-width: 768px){
+        @include respond-below(sm) {
             display: block;
         }
 

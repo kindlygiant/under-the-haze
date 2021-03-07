@@ -1,40 +1,42 @@
 @import '../../css/variables.scss';
 
 .episode-detail-page {
-    
-    a {
-        position: unset;
-    }
-
-    .left {
-        display: none;
-    }
-
-    .right {
-        width: 100%;
-        text-align: center;
-    }
-
-    .episode-description {
-        text-align: center;
+    ul {
+        margin: 0;
     }
 
     .episode {
         color: $on-primary;
         border-bottom: none;
+        margin-bottom: 0;
+        padding: 16px 32px;
+
+        .right {
+            text-align: left;
+        }
+
+        .episode-audio {
+            padding: 20px 0;
+        }
+    
+        .episode-description {
+            text-align: center;
+        }
+    
+        .episode-link {
+            display: none;
+        }
     }
 
-    .episode-link {
-        display: none;
-    }
 
-    img {
-        height: 100%;
-        width: 100%;
-    }
-
-    @media only screen and (min-width: 768px) {
+    
+    @include respond-above(sm) {
         overflow: auto;
+
+        .episode {
+            display: block;
+        }
+
         .content-left {
             float: left;
             width: 50%;
@@ -48,11 +50,6 @@
             width: 400px;
             margin: auto;
             display: inline-block;
-
-            .episode {
-                display: flex;
-                flex-direction: column;
-            }
 
             div {
                 padding: 0;
