@@ -2,15 +2,25 @@ import React from 'react';
 //Styling
 import './Music.scss';
 
+import themeUrl from '../../assets/audio/theme.wav';
+
 //Components
+import MusicPlayer from '../../components/MusicPlayer/MusicPlayer'
 
 class Music extends React.Component{
+    constructor(props) {
+        super(props);
+        this.themeUrl=themeUrl;
+    }
     render(){
         return (
             <div className="content music">
                 <p>
-                    No music yet! But we're working hard on it!
+                    We have one song. This is it.
                 </p>
+                <MusicPlayer
+                    songUrl={this.themeUrl}
+                />
             </div>
         );
     }

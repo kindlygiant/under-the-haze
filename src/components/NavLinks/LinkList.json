@@ -12,7 +12,7 @@
     {
         "link":"/music",
         "name":"Music",
-        "visible": false
+        "visible": true
     },
     {
         "link":"/about",
