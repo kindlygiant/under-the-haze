@@ -25,6 +25,7 @@ function FormatNavLinks(props) {
         return (
             <Menu isOpen={props.menuOpen} onStateChange={(state => props.stateChange(state))} width={"100%"} pageWrapId={"page-wrap"} outerContainerId={"app"} customCrossIcon={ false } noOverlay>
                 {listItems}
+                <div className="social"></div>
             </Menu>
         )
     } else if(listItems && !props.isMobile) {

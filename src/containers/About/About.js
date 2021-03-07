@@ -9,8 +9,8 @@ import CastTile from '../../components/CastTile/CastTile';
 import castList from '../../components/CastTile/CastList.json';
 
 function Cast(props) {
-    const listItems = props.castList.map((castMember) =>
-        <li>
+    const listItems = props.castList.map((castMember, i) =>
+        <li key={i}>
             <CastTile
                 name={castMember.name}
                 roles={castMember.roles}
